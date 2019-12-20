@@ -15,6 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if let flv = Bundle.main.infoDictionary?["Environment"] as? String {
+            print("\(flv) value")
+        }
+        else {
+            print(" Value not found")
+        }
+        
+        
         return true
     }
 
